@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const CategoriesDetails = styled.div`
 
     width: 100%;
-    max-width: 1200px;
+    max-width: min(1400px, 96vw);
 
     display: flex;
     align-items: center;

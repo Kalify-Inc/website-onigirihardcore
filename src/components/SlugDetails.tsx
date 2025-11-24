@@ -29,42 +29,13 @@ const SlugDetails = styled.div`
     }
 
     section {
-        margin-left: 28rem;
-        width: 71%;
+        margin: 0 auto 5rem auto;
+        width: min(1100px, 100%);
+        padding: 0 1.5rem 1rem;
 
-        @media (max-width: 1920px) {
-            width: 50%;
-            margin: auto;
-            margin-bottom: 5%;
+        @media (min-width: 1921px) {
+            width: min(70%, 1400px);
         }
-
-        @media (max-width: 1600px) {
-            margin-left: 20rem;
-            width: 50%;
-        }
-
-        @media (max-width: 1440px) {
-            margin-left: 14rem;
-            width: 60%;
-        }
-
-        @media (max-width: 1366px) {
-            margin-left: 12rem;
-            width: 70%;
-        }
-
-        @media (max-width: 768px) {
-            margin-left: 5rem;
-            width: 80%;
-        }
-
-        @media (max-width: 500px) {
-            margin-left: 1rem;
-            width: 90%;
-        }
-
-        margin-bottom: 5rem;
-        padding-bottom: 1rem;
 
         h1 {
             margin-top: -1rem;
@@ -109,13 +80,12 @@ const SlugDetails = styled.div`
         }
 
         .date {
-            margin-bottom: 0rem;
-            margin-left: 48rem;
+            margin: 0;
+            text-align: right;
         }
 
         .block__content {
             width: 100%;
-            min-width: 80%;
             max-width: 100%;
             text-align: justify;
             font-size: 1.1rem;
@@ -142,22 +112,12 @@ const SlugDetails = styled.div`
         }
 
         .title__content {
-            width: 60rem;
-
-            @media (max-width: 1366px) {
-                width: 100%;
-            }
+            width: 100%;
+            max-width: 60rem;
 
             @media (max-width: 768px) {
                 font-size: 1.6em;
                 line-height: 30px;
-                width: 100%;
-            }
-
-            @media (max-width: 500px) {
-                font-size: 1.6em;
-                line-height: 30px;
-                width: 90%;
             }
         }
 
@@ -166,7 +126,8 @@ const SlugDetails = styled.div`
                 display: flex;
                 justify-content: center;
                 margin: 0 auto;
-                width: 80%;
+                width: 100%;
+                max-width: 80%;
                 height: 100%;
             }
         }
@@ -191,18 +152,13 @@ const SlugDetails = styled.div`
         }
 
         iframe {
-            width: 60rem;
+            width: 100%;
+            max-width: 60rem;
             margin-left: 0rem;
-            height: 38rem;
+            height: clamp(20rem, 50vw, 38rem);
             border: none;
 
-            @media (max-width: 500px) {
-                width: 100%;
-                height: 25rem;
-            }
-
             @media (max-width: 768px) {
-                width: 100%;
                 height: 25rem;
             }
         }
