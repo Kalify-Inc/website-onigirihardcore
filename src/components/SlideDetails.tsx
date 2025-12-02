@@ -14,15 +14,12 @@ const SlideDetails = styled.div`
     }
 
     .keen-slider {
-        width: 100%;
-        height: 40rem;
+        width: min(96vw, 1600px);
+        margin: 0 auto;
+        height: clamp(24rem, 60vw, 40rem);
 
         @media (max-width: 1366px) {
             height: 30rem;
-        }
-
-        @media (max-width: 500px) {
-            width: 28rem;
         }
 
         a {
@@ -31,7 +28,7 @@ const SlideDetails = styled.div`
 
         img {
             width: 100%;
-            height: 40rem;
+            height: clamp(24rem, 60vw, 40rem);
             object-fit: cover;
             filter: brightness(50%);
 
@@ -39,9 +36,6 @@ const SlideDetails = styled.div`
                 height: 30rem;
             }
 
-            @media (max-width: 500px) {
-                width: 28rem;
-            }
         }
 
         .keen-slider__slide {
@@ -55,17 +49,17 @@ const SlideDetails = styled.div`
                 text-transform: initial;
                 line-height: 40px;
                 text-align: left;
-                width: 58rem;
+                width: clamp(20rem, 70vw, 60rem);
 
                 @media (max-width: 1366px) {
                     width: 80%;
                 }
 
                 @media (max-width: 500px) {
-                    width: 85%;
-                    transform: scale(0.9);
-                    left: 0;
-                    top: 15%;
+                    width: 90%;
+                    transform: translate(-50%, -20%) scale(0.95);
+                    left: 50%;
+                    top: 20%;
                 }
 
                 @media (max-width: 375px) {
