@@ -1,10 +1,9 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const SlideDetails = styled.div`
-
     .keen-slider-skeleton {
         width: 100%;
-        height: 40rem;
+        height: clamp(24rem, 60vw, 40rem);
 
         display: flex;
         align-items: center;
@@ -14,7 +13,7 @@ const SlideDetails = styled.div`
     }
 
     .keen-slider {
-        width: min(96vw, 1600px);
+        width: 100%;
         margin: 0 auto;
         height: clamp(24rem, 60vw, 40rem);
 
@@ -31,11 +30,6 @@ const SlideDetails = styled.div`
             height: clamp(24rem, 60vw, 40rem);
             object-fit: cover;
             filter: brightness(50%);
-
-            @media (max-width: 1366px) {
-                height: 30rem;
-            }
-
         }
 
         .keen-slider__slide {
@@ -75,10 +69,10 @@ const SlideDetails = styled.div`
                     color: var(--white);
 
                     @media (max-width: 500px) {
-                         font-size: 0.8em;
-                         width: 300px;
-                         margin-top: 50px;
-                     }
+                        font-size: 0.8em;
+                        width: 300px;
+                        margin-top: 50px;
+                    }
 
                     .latest {
                         padding: 2.5px 10px;
@@ -93,7 +87,11 @@ const SlideDetails = styled.div`
                         font-weight: bold;
                     }
 
-                    .tecnologies, .animes, .movies, .games, .development {
+                    .tecnologies,
+                    .animes,
+                    .movies,
+                    .games,
+                    .development {
                         padding: 2.6px 10px;
                         margin: 0 -10px;
                     }
@@ -112,7 +110,8 @@ const SlideDetails = styled.div`
                             font-weight: bold;
                         }
 
-                        .date, .author {
+                        .date,
+                        .author {
                             display: none;
                         }
                     }
@@ -172,9 +171,9 @@ const SlideDetails = styled.div`
                     @media (max-width: 500px) {
                         font-size: 1.8em;
                         line-height: 40px;
-                   }
+                    }
 
-                   @media (max-width: 320px) {
+                    @media (max-width: 320px) {
                         font-size: 1.5em;
                         transform: scale(0.8);
                     }
@@ -212,7 +211,7 @@ const SlideDetails = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align:center;
+        text-align: center;
         height: 3rem;
         color: var(--white);
         border-bottom: 1px solid var(--white);
@@ -244,8 +243,8 @@ const SlideDetails = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align:center;
+        text-align: center;
     }
-`
+`;
 
-export default SlideDetails
+export default SlideDetails;
