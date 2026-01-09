@@ -113,7 +113,7 @@ export default function Home({ postData }) {
 
                         {
                             firstAnime && firstAnime.map(post => (
-                                <a className='categories-content' href={post.slug} key={post.id}>
+                                <a className='categories-content' href={post.slug} key={post.slug}>
                                     <img src={post.frontmatter.image} alt={post.frontmatter.title} width={500} height={500} loading='lazy' />
                                     <h1>{post.frontmatter.title.length > 35 ? post.frontmatter.title.slice(0, 55) + "..." : post.frontmatter.title}</h1>
 
@@ -129,7 +129,7 @@ export default function Home({ postData }) {
                         <div className="posts">
                             {
                                 lastAnime && lastAnime.map(post => (
-                                    <div className="post" key={post.id}>
+                                    <div className="post" key={post.slug}>
                                         <a href={post.slug}>
                                             <img src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} loading='lazy' />
 
@@ -152,7 +152,7 @@ export default function Home({ postData }) {
 
                         {
                             firstGames && firstGames.map(post => (
-                                <a className='categories-content' href={post.slug} key={post.id}>
+                                <a className='categories-content' href={post.slug} key={post.slug}>
                                     <img src={post.frontmatter.image} alt={post.frontmatter.title} width={500} height={500} loading='lazy' />
                                     <h1>{post.frontmatter.title.length > 35 ? post.frontmatter.title.slice(0, 55) + "..." : post.frontmatter.title}</h1>
 
@@ -167,7 +167,7 @@ export default function Home({ postData }) {
                         <div className="posts">
                             {
                                 lastGames && lastGames.map(post => (
-                                    <div className="post" key={post.id}>
+                                    <div className="post" key={post.slug}>
                                         <a href={post.slug} >
                                             <img src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} loading='lazy' />
 
@@ -190,7 +190,7 @@ export default function Home({ postData }) {
 
                         {
                             firstMovies && firstMovies.map(post => (
-                                <a className='categories-content' href={post.slug} key={post.id}>
+                                <a className='categories-content' href={post.slug} key={post.slug}>
                                     <img src={post.frontmatter.image} alt={post.frontmatter.title} width={500} height={500} loading='lazy' />
                                     <h1>{post.frontmatter.title.length > 35 ? post.frontmatter.title.slice(0, 55) + "..." : post.frontmatter.title}</h1>
 
@@ -206,7 +206,7 @@ export default function Home({ postData }) {
                         <div className="posts">
                             {
                                 lastMovies && lastMovies.map(post => (
-                                    <div className="post" key={post.id}>
+                                    <div className="post" key={post.slug}>
                                         <a href={post.slug}>
                                             <img src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} loading='lazy' />
 
@@ -231,8 +231,8 @@ export default function Home({ postData }) {
 
                         <div className="content">
                             {
-                                technologies.slice(0, 12).map((post, index) => (
-                                    <a href={post.slug} key={index}>
+                                technologies.slice(0, 12).map((post) => (
+                                    <a href={post.slug} key={post.slug}>
                                         <img src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} loading='lazy' />
 
                                         <div className="title">
@@ -252,8 +252,8 @@ export default function Home({ postData }) {
                             <p>Últimas Notícias</p>
                         </div>
                         {
-                            postData && postData.slice(0, 20).map((post, index) => (
-                                <div className="content" key={index}>
+                            postData && postData.slice(0, 20).map((post) => (
+                                <div className="content" key={post.slug}>
                                     <div className="leftContent">
                                         <a href={post.slug}>
                                             <img src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} loading='lazy' />
