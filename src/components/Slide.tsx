@@ -67,7 +67,7 @@ const Slide = ({ posts }) => {
                         postsData.slice(0, 5).map((post) => (
                             <div className="keen-slider__slide" key={post}>
                                 <a href={post.slug}>
-                                    <img src={post.frontmatter.image} alt={post.frontmatter.title} width={1920} height={500} loading="lazy" />
+                                    <img src={post.frontmatter.image} alt={post.frontmatter.title} width={1920} height={1080} loading="lazy" />
                                 </a>
                                 <div className="slider-description">
                                     <div className="slide-tag">
@@ -77,11 +77,7 @@ const Slide = ({ posts }) => {
 
                                         <span className="date">{formatDate(post.frontmatter.date)}</span>
                                         <span> - </span>
-                                        <span className="author">
-                                            <a href="https://yagasaki.dev/about" target="_blank" rel="noreferrer">
-                                                Anderson &apos;Yagasaki&apos; Marlon
-                                            </a>
-                                        </span>
+                                        <span className="author">{post.frontmatter.author}</span>
                                     </div>
 
                                     <a href={post.slug}>

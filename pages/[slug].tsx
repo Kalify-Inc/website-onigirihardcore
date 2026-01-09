@@ -146,9 +146,9 @@ const Post = ({ frontmatter, slug, content }) => {
                 <NextSeo
                     title={frontmatter.title}
                     description={frontmatter.description}
-                    canonical={`https://onigirihardcore.com.br/` + slug}
+                    canonical={`https://onigirihardcore.vercel.app/` + slug}
                     openGraph={{
-                        url: "https://onigirihardcore.com.br/" + slug,
+                        url: "https://onigirihardcore.vercel.app/" + slug,
                         title: frontmatter.title,
                         description: frontmatter.description,
                         images: [
@@ -173,7 +173,7 @@ const Post = ({ frontmatter, slug, content }) => {
                     <title>{frontmatter.title + " | Onigiri Hardcore"}</title>
                 </Head>
 
-                {frontmatter.image && <img src={frontmatter.image} alt={frontmatter.title} width={1024} height={768} />}
+                {frontmatter.image && <img src={frontmatter.image} alt={frontmatter.title} width={1920} height={1080} />}
 
                 <section key={frontmatter.id}>
                     <p className="block__content">

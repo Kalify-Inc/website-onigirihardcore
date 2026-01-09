@@ -142,7 +142,7 @@ const SlideDetails = styled.div`
                     }
 
                     .author {
-                        text-decoration: underline;
+                        text-decoration: none;
 
                         a {
                             color: var(--white);
