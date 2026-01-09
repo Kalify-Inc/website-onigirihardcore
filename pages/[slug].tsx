@@ -93,7 +93,7 @@ const Post = ({ frontmatter, slug, content }) => {
     };
 
     function copyToClipboard() {
-        let copyText = frontmatter.title + "\n\nhttps://onigirihardcore.com.br/" + slug;
+        let copyText = frontmatter.title + "\n\nhttps://onigirihardcore.vercel.app/" + slug;
 
         toast.success("Link copiado no seu clipboard!");
         navigator.clipboard.writeText(copyText);
