@@ -25,11 +25,7 @@ const Header = () => {
         };
 
         const handleClickOutside = (event: MouseEvent) => {
-            if (
-                drawnerRef.current &&
-                event.target instanceof Node &&
-                !drawnerRef.current.contains(event.target)
-            ) {
+            if (drawnerRef.current && event.target instanceof Node && !drawnerRef.current.contains(event.target)) {
                 setOpen(false);
             }
         };
@@ -90,13 +86,6 @@ const Header = () => {
                                         <Link href="/#animes">
                                             Animes {`&`} HQ{`'`}s
                                         </Link>
-                                        <Link
-                                            href="https://github.com/Yagasaki7K/website-onigirihardcore/raw/main/onigirihardcore.apk"
-                                            target="_blank"
-                                            rel="noreferrer"
-                                        >
-                                            <i className="uil uil-android"></i> Download App
-                                        </Link>
                                     </div>
                                 </div>
                             </motion.div>
@@ -140,15 +129,6 @@ const Header = () => {
                                 </li>
                                 <li>
                                     <Link href="/#news">Ciência {`&`} Tecnologia</Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href="https://github.com/Yagasaki7K/website-onigirihardcore/raw/main/onigirihardcore.apk"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        <i className="uil uil-android"></i> Google Play
-                                    </Link>
                                 </li>
                             </span>
                         </ul>
