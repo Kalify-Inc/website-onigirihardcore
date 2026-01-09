@@ -230,24 +230,19 @@ const Footer = () => {
                 </div>
 
                 <div className="content">
-                    <h1>Nossa Organização</h1>
-                    <Link href="https://kalify.vercel.app" target="_blank">
-                        <li>Kalify Inc</li>
-                    </Link>
-                    <Link href="https://yagasaki.vercel.app" target="_blank">
-                        <li>Anderson Marlon</li>
-                    </Link>
-                </div>
-
-                <div className="content">
                     <h1>Mapa do Site</h1>
-                    <Link href="/">
-                        <li>Inicio</li>
-                    </Link>
-
                     <Link href="/noticias">
                         <li>Notícias</li>
                     </Link>
+
+                    <Link href="/#animes">
+                        <li>Animes {"&"} HQs</li>
+                    </Link>
+
+                    <Link href="/#news">
+                        <li>Ciência {"&"} Tecnologia</li>
+                    </Link>
+
                     <Link href="https://github.com/Yagasaki7K/website-onigirihardcore/raw/main/onigirihardcore.apk" target="_blank" rel="noreferrer">
                         <li>Download</li>
                     </Link>
@@ -262,7 +257,7 @@ const Footer = () => {
             </div>
             <div className="copyright">
                 <p>
-                    © 2015 - {new Date().getFullYear()} Onigiri Hardcore - Todos os direitos reservados. Desenvolvido pela{" "}
+                    © 2013 - {new Date().getFullYear()} Onigiri Hardcore - Todos os direitos reservados. Desenvolvido pela{" "}
                     <Link href="https://kalify.vercel.app" target="_blank">
                         Kalify Inc
                     </Link>
