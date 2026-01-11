@@ -66,7 +66,10 @@ export default class MyDocument extends Document {
 
                     <meta name="author" content="Anderson 'Yagasaki' Marlon" />
                     <meta name="robots" content="index, follow" />
+                    <meta name="theme-color" content="#0496dd" />
                     <link rel="shortcut icon" href="/logo.png" />
+                    <link rel="apple-touch-icon" href="/logo.png" />
+                    <link rel="manifest" href="/manifest.json" />
                     <meta property="og:locale" content="pt_BR" />
 
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
