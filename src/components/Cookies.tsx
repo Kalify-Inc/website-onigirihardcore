@@ -112,51 +112,52 @@ const CookieDetails = styled.div`
 `;
 
 const Cookies = () => {
-	const [showCookies, setShowCookies] = useState(true);
+    const [showCookies, setShowCookies] = useState(true);
 
-	const getInfosAboutCookies = () => {
-		localStorage.setItem("cookiesAccepted", "true");
-		setShowCookies(false);
-		getOSAndSendToDiscord();
-	};
+    const getInfosAboutCookies = () => {
+        localStorage.setItem("cookiesAccepted", "true");
+        setShowCookies(false);
+        getOSAndSendToDiscord();
+    };
 
-	const turnOffCookies = () => {
-		setShowCookies(false);
-		localStorage.setItem("cookiesAccepted", "false");
-	};
+    const turnOffCookies = () => {
+        setShowCookies(false);
+        localStorage.setItem("cookiesAccepted", "false");
+    };
 
-	useEffect(() => {
-		if (localStorage.getItem("cookiesAccepted")) {
-			setShowCookies(false);
-		}
-	}, []);
+    useEffect(() => {
+        if (localStorage.getItem("cookiesAccepted")) {
+            setShowCookies(false);
+        }
+    }, []);
 
-	return (
-		showCookies && (
-			<CookieDetails>
-				<div className="header">
-					<img src="/cookie.png" alt="cookie" />
-					<div className="title">
-						<h1>O Onigiri Hardcore usa cookies para tornar sua experiência ainda melhor!</h1>
-						<p>
-							Usamos cookies para oferecer a melhor experiência possível ao usuário. Ao usar os serviços da <strong>Leaf Software</strong>, você aceita o uso de cookies de acordo com
-							suas seleções. Para mais informações, consulte nossa{" "}
-							<Link href="https://leafsoftware.vercel.app/legal" target="_blank">
-								Políticas de Privacidade
-							</Link>
-							.
-						</p>
-					</div>
-				</div>
-				<div className="content">
-					<div className="buttons">
-						<button onClick={() => getInfosAboutCookies()}>Aceitar Cookies</button>
-						<button onClick={() => turnOffCookies()}>Rejeitar Cookies</button>
-					</div>
-				</div>
-			</CookieDetails>
-		)
-	);
+    return (
+        showCookies && (
+            <CookieDetails>
+                <div className="header">
+                    <img src="/cookie.png" alt="cookie" />
+                    <div className="title">
+                        <h1>O Onigiri Hardcore usa cookies para tornar sua experiência ainda melhor!</h1>
+                        <p>
+                            Usamos cookies para oferecer a melhor experiência possível ao usuário. Ao usar os serviços da{" "}
+                            <strong>Kindred Software</strong>, você aceita o uso de cookies de acordo com suas seleções. Para mais informações,
+                            consulte nossa{" "}
+                            <Link href="https://kindredsoftware.vercel.app/legal" target="_blank">
+                                Políticas de Privacidade
+                            </Link>
+                            .
+                        </p>
+                    </div>
+                </div>
+                <div className="content">
+                    <div className="buttons">
+                        <button onClick={() => getInfosAboutCookies()}>Aceitar Cookies</button>
+                        <button onClick={() => turnOffCookies()}>Rejeitar Cookies</button>
+                    </div>
+                </div>
+            </CookieDetails>
+        )
+    );
 };
 
 export default Cookies;
