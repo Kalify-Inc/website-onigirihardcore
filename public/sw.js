@@ -1,4 +1,4 @@
-const CACHE_NAME = 'onigiri-hardcore-v1';
+const CACHE_NAME = 'onigiri-hardcore-v2';
 const PRECACHE_URLS = ['/', '/manifest.json', '/logo.png'];
 
 self.addEventListener('install', (event) => {
@@ -21,6 +21,12 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') {
+    return;
+  }
+
+  const requestUrl = new URL(event.request.url);
+  if (requestUrl.pathname.startsWith('/noticias')) {
+    event.respondWith(fetch(event.request));
     return;
   }
 
