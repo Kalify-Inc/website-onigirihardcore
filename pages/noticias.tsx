@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Header from "../src/components/Header";
 import Footer from "../src/components/Footer";
 import LastNewsDetails from "../src/components/LastNewsDetails";
@@ -11,7 +11,8 @@ import matter from "gray-matter";
 import formatDate from "../src/utils/formatDate";
 import calculateReadingTime from "../src/utils/calculateReadingTime";
 
-export async function getStaticProps() {
+export async function getServerSideProps({ res }) {
+    res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate");
     // Get files from the posts dir
     const files = fs.readdirSync(path.join("posts"));
 
